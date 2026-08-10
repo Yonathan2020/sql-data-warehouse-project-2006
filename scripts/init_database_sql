@@ -1,3 +1,5 @@
+/* CREATE database and schemas
+*/
 CREATE DATABASE DataWarehouse;
 USE DataWarehouse;
 
