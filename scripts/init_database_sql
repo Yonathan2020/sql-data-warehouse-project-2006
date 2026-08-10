@@ -1,0 +1,18 @@
+CREATE DATABASE DataWarehouse;
+USE DataWarehouse;
+
+IF NOT EXISTS (SELECT * FROM sys.schemas WHERE name = N'bronze')
+BEGIN
+    EXEC('CREATE SCHEMA bronze;');
+END;
+GO
+IF NOT EXISTS (SELECT * FROM sys.schemas WHERE name = N'silver')
+BEGIN
+    EXEC('CREATE SCHEMA silver;');
+END;
+GO
+IF NOT EXISTS (SELECT * FROM sys.schemas WHERE name = N'gold')
+BEGIN
+    EXEC('CREATE SCHEMA gold;');
+END;
+GO
